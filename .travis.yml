@@ -1,7 +1,7 @@
 
 env:
     global:
-        - REPO_DIR=your-project
+        - REPO_DIR=kapteyn
         # Commit from your-project that you want to build
         - BUILD_COMMIT=master
         # pip dependencies to _build_ your project
