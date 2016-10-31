@@ -12,25 +12,26 @@ environment:
     - PYTHON: "C:\\Python35-x64"
 
 install:
+ - "SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%"
   # We need wheel installed to build wheels
-  - "%PYTHON%\\python.exe -m pip install wheel"
-  - "%PYTHON%\\python.exe -m pip install cython six numpy"
+  - pip install wheel"
+  - pip install cython six numpy"
   - git clone https://github.com/kapteyn-astro/kapteyn --depth 20
   - cd kapteyn
   - git tag -l
   - git checkout tags/v2.3.1
-  - "%PYTHON%\\python.exe -m pip install -e ."
+  - pip install -e .
 
 build: off
 
 
 test_script:
- - "%PYTHON%\\python.exe -c \'import kapteyn\'"
- - "%PYTHON%\\python.exe -c \'import kapteyn.wcs\'"
- - "%PYTHON%\\python.exe -c \'import kapteyn.ascarray\'"
- - "%PYTHON%\\python.exe -c \'import kapteyn.profiles\'"
- - "%PYTHON%\\python.exe -c \'import kapteyn._nd_image\'"
- - "%PYTHON%\\python.exe -c \'import kapteyn.kmpfit\'"
+ - python -c "import kapteyn"
+ - python -c "import kapteyn.wcs"
+ - python -c "import kapteyn.ascarray"
+ - python -c "import kapteyn.profiles"
+ - python -c "import kapteyn._nd_image"
+ - python -c "import kapteyn.kmpfit"
 
 after_test:
   # This step builds your wheels.
