@@ -16,6 +16,7 @@ install:
   - "%PYTHON%\\python.exe -m pip install wheel"
   - "%PYTHON%\\python.exe -m pip install cython six numpy"
   - git clone https://github.com/kapteyn-astro/kapteyn --depth 20
+  - cd kapteyn
   - git tag -l
   - git checkout tags/v2.3.1
 
