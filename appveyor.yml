@@ -19,7 +19,7 @@ install:
   - git clone https://github.com/kapteyn-astro/kapteyn --depth 20
   - cd kapteyn
   - git tag -l
-  - git checkout tags/v2.3.1
+#  - git checkout tags/v2.3.1
   - pip install -e .
 
 build: off
