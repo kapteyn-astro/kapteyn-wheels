@@ -31,8 +31,7 @@ test_script:
  - "%PYTHON%\\python.exe -c 'import kapteyn.profiles'"
  - "%PYTHON%\\python.exe -c 'import kapteyn._nd_image'"
  - "%PYTHON%\\python.exe -c 'import kapteyn.kmpfit'"
- - "%PYTHON%\\python.exe -c 'import kapteyn.celestial as c; c.skymatrix((2,'\j2000\',c.fk5), 1)[0]'"
-
+ 
 after_test:
   # This step builds your wheels.
   # Again, you only need build.cmd if you're building C extensions for
