@@ -25,13 +25,13 @@ build: off
 
 
 test_script:
- - python -c "import kapteyn"
- - python -c "import kapteyn.wcs"
- - python -c "import kapteyn.ascarray"
- - python -c "import kapteyn.profiles"
- - python -c "import kapteyn._nd_image"
- - python -c "import kapteyn.kmpfit"
- - python -c "import kapteyn.celestial as c; c.skymatrix((2,'j2000',c.fk5), 1)[0]"
+ - "%PYTHON%\\python.exe -c 'import kapteyn'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn.wcs'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn.ascarray'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn.profiles'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn._nd_image'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn.kmpfit'"
+ - "%PYTHON%\\python.exe -c 'import kapteyn.celestial as c; c.skymatrix((2,'\j2000\',c.fk5), 1)[0]'"
 
 after_test:
   # This step builds your wheels.
