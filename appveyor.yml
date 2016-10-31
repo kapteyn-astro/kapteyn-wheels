@@ -15,10 +15,11 @@ install:
   # We need wheel installed to build wheels
   - "%PYTHON%\\python.exe -m pip install wheel"
   - "%PYTHON%\\python.exe -m pip install cython six numpy"
+  - git clone https://github.com/kapteyn-astro/kapteyn
+  - git checkout tags/v2.3.1
 
-build:
- - git clone https://github.com/kapteyn-astro/kapteyn
- - git checkout tags/v2.3.1
+build: off
+
 
 test_script:
  - python -c "import kapteyn"
